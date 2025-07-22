@@ -22,7 +22,9 @@ Node *BinaryTree(){
         return NULL;
     }
     Node *temp = new Node(X);
+    cout << "Enter the left element of " << temp -> data << endl;
     temp -> left = BinaryTree();
+    cout << "Enter the right element of " << temp -> data << endl;
     temp -> right = BinaryTree();
     return temp;
 }

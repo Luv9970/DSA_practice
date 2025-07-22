@@ -6,13 +6,13 @@ using namespace std;
 // Largest element in an array: ✅
 // Second Largest element in an array: ✅
 // Second Smallest element in an array: ✅
-// Check if array is sorted or not:
-// Remove duplicates from a sorted array:
-// Left rotate an array by one place:
-// Left rotate an array by 'D' places:
-// Right rotate an array by one place:
-// Right rotate an array by 'D' places:
-// Move zeros to the end:
+// Check if array is sorted or not:✅
+// Remove duplicates from a sorted array: ✅🔖
+// Left rotate an array by one place: ✅
+// Left rotate an array by 'D' places: ✅
+// Right rotate an array by one place: ✅
+// Right rotate an array by 'D' places: ✅ 
+// Move zeros to the end: ✅
 
 // *********************************************************************************
 
@@ -144,7 +144,17 @@ int main()
 
     
 
-    // Check if array is sorted or not:
+    // // Check if array is sorted or not:
+    // int size = v.size();
+    // for(int i=0 ; i<size-1 ; i++){
+    //     if(v[i] > v[i+1]){
+    //         cout << "The array is not sorted";
+    //         break;
+    //     }
+    // }
+
+
+
     // Remove duplicates from a sorted array:
     // Left rotate an array by one place:
     // Left rotate an array by 'D' places:
@@ -160,6 +170,10 @@ int main()
 
     // Union of two given sorted array:
     // Intersection of two given sorted arrays:
+    // Find missing number in an array:
+    // FInd the number that appears only once and other number twice:
+    // Maximum consecutive ones:
+
 
     return 0;
 }
