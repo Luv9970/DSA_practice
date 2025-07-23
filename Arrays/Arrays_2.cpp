@@ -10,6 +10,8 @@ void print(vector<int> &arr)
     }
 }
 
+
+
 int main()
 {
 
@@ -86,6 +88,29 @@ int main()
     // Maximum subarray sum
     // Rearrange array elements by sign:
      
+    vector<int> v={1,2,2,1,3};
+
+    vector<vector<int>> ans;
+    vector<int> count; 
+    vector<int> hashed_arr;
+
+    for(int i=0 ; i<v.size() ;i++){
+        hashed_arr[v[i]]++;
+    }
+
+    for(int i=0 ; i<hashed_arr.size() ; i++){
+        if(hashed_arr[i] != 0){
+            count.push_back(i);
+            count.push_back(hashed_arr[i]);
+            ans.push_back(count);
+        }
+    }
+
+    print(ans[0]);
+    print(ans[1]);
+    print(ans[2]);
+    print(ans[3]);
+
 
     return 0;
 }
