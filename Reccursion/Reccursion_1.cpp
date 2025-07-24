@@ -1,4 +1,5 @@
 #include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
 void Fun3(int n){
@@ -49,7 +50,40 @@ int Sum(int n){
     if(n == 0) return 0;
 
     cout << "n -> " << n << endl;
-     Sum(n-2) + n;
+    return Sum(n-1) + n;
+}
+
+int Fact(int n){
+    if(n == 0) return 1;
+    if(n == 1) return 1;
+
+    return n*Fact(n-1);
+}
+
+int pow2(int n){
+    if(n == 0){
+        return 1;
+    }
+
+    return 2*pow2(n-1);
+}
+
+int s_square(int n){
+    if(n == 0) return 0;
+    if(n == 1) return 1;
+
+    return n*n + s_square(n-1);
+}
+
+int fibonacii(int n){
+    if(n == 0) return 0;
+    if(n == 1) return 1;
+
+    return fibonacii(n-1) + fibonacii(n-2);
+}
+
+void printArr(int arr[], int n){
+    
 }
 
 int main(){
@@ -78,12 +112,36 @@ int main(){
 
 
     // Sum of first N numbers:
-    int sum = Sum(5);
-    cout << "The sum is" << sum;
+    // int sum = Sum(5);
+    // cout << "The sum is " << sum;
 
+
+
+    // Factorial of N numbers:
+    // int ans = Fact(6);
+    // cout << "The factorial is " << ans << endl;
     
 
 
+    // Power of 2:
+    // create a general formulae for the power:
+    // int ans = pow2(4);
+    // cout << " The value of 2**4 is " << ans << endl;
 
+
+
+    // Sum of square of N numbers:
+    // int ans = s_square(3);    
+    // cout << "The value of sum of squares is: " << ans << endl;
+
+
+
+    // Fibonacci Sequence:
+    // int n =10;
+    // int ans = fibonacii(n);
+    // cout << "The " << n << "th fibonacii number is : " << ans << endl;
+
+
+    
     return 0;
 }
