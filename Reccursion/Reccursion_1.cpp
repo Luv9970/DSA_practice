@@ -82,8 +82,30 @@ int fibonacii(int n){
     return fibonacii(n-1) + fibonacii(n-2);
 }
 
-void printArr(int arr[], int n){
-    
+void printArr(int arr[], int index ,int size){
+    if(index == size) return;
+
+    cout << arr[index] << " ";
+    printArr(arr , index+1 , size); 
+}
+
+void printArr_reverse( int arr[] , int last_index){
+    if(last_index < 0 ) return;
+
+    cout << arr[last_index] << " ";
+    printArr_reverse(arr , last_index-1);
+}
+
+int ArrSum1(int arr[] , int index , int size){
+    if(index == size) return 0;
+
+    return arr[index] + ArrSum1(arr, index+1 , size);
+}
+
+int ArrSum2(int arr[] , int index){
+    if(index == -1) return 0;
+
+    return arr[index] + ArrSum2(arr , index-1); 
 }
 
 int main(){
@@ -141,6 +163,34 @@ int main(){
     // int ans = fibonacii(n);
     // cout << "The " << n << "th fibonacii number is : " << ans << endl;
 
+
+    // (using 3 parameters):
+    // Print an array using recursion:
+    // Print reverse of an array using recursion:
+    int arr[] = {1, 2, 3, 4, 5};
+    // printArr(arr, 0 ,5);
+    // cout << endl;
+
+
+
+    // (Using only 2 parameters):
+    // print an array in reverse order:
+    // print an array:
+    // int size = 4;
+    // printArr_reverse(arr , size);
+
+
+
+    // Sum of all elements of an array:
+    // Method-1:
+    // int size = 5;
+    // int ans = ArrSum1(arr , 0 , size);
+    // cout << " The sum of all the elements of an array is : " << ans << endl;
+
+    // Method-2:
+    int index = 4;
+    int ans = ArrSum2(arr , index);
+    cout << " The sum of all the elements of an array is : " << ans << endl;
 
     
     return 0;
