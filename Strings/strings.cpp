@@ -166,11 +166,37 @@ int main(){
 
 
     // Longest Palindrome:
-    string s2="aaaaaiubibdsicsdcisdcsdicsodcsdocsd";
-    vector<int> count(26,0);
-    int ans = 0;
+    // Have to return the size of the longest Palindrome:
+    // Count store kar lo:
+    // Again iterate on the count array:
+    // if: even number of times -> direclty add to ans
+    // else: odd number of times -> count - 1 karke add to the answer  
+    // string s2="aaaabbccddefghij";
+    // vector<int> count(26,0);
+    // int ans = 0;
+    // for(int i=0 ; i<s2.size() ; i++){
+    //     count[s2[i] - 'a']++;
+    // }
+    // // Counting the length of the string:
+    // for(int j=0 ; j<26 ; j++){
+    //     if(count[j] % 2 == 0){
+    //         ans = ans + count[j];
+    //     }else{
+    //         ans = ans + count[j]-1;
+    //     }
+    // }
+    // //Checking if there exist any odd number in the string or not: 
+    // for(int k=0 ; k<26 ; k++){
+    //     if(count[k] % 2 != 0){
+    //         ans = ans+1;
+    //         cout << "The length of the longest palindrome is : " << ans << endl;
+    //         return 0; 
+    //     } 
+    // }
+    // cout << "The length of the longest palindrome is : " << ans << endl;
    
-    cout << "The length of the longest palindrome is : " << ans << endl;
+
+   
 
 
     return 0;
