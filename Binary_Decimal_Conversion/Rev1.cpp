@@ -38,16 +38,44 @@ int main(){
 
 
     // Binary to decimal conversion:
-    int binary = 1101;
-    int num = 0;
-    int i=0;
-    while(binary > 0){
-        int last_digit = binary % 10;
-        num = num + last_digit*pow(2,i);
-        i++;
-        binary = binary/10;
+    // int binary = 1101;
+    // int num = 0;
+    // int i=0;
+    // while(binary > 0){
+    //     int last_digit = binary % 10;
+    //     num = num + last_digit*pow(2,i);
+    //     i++;
+    //     binary = binary/10;
+    // }
+    // cout << "The value of number is:" << num << endl;
+
+
+
+    // ******************Square Root of X*************************
+    int n =36;
+    int start = 1;
+    int end = n;
+    while(start < end){
+        int mid = (start+end)/2;
+        if(mid*mid == n){
+            cout << "The SQRT of " << n << " is: " << mid;
+            break;
+        } 
+        if(mid*mid < n){
+            start = mid+1;
+        }
+        else if(mid*mid > n){
+            end = mid-1;
+        }
     }
-    cout << "The value of number is:" << num << endl;
+
+
+
+
+
+
+
+
 
 
 
